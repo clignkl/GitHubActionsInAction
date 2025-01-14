@@ -35,3 +35,9 @@ jobs:
         run: |
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
+      - run: | 
+          echo "Homedrive: ${{ inputs.homedrive }}"
+          echo "Log level: ${{ inputs.logLevell }}"
+          echo "Tag source: ${{ fromJSON(inputs.tag) }}"
+          echo "Environment: ${{ inputs.environment }}"
+        name: Workflow Inputs
