@@ -41,3 +41,4 @@ jobs:
           echo "Tag source: ${{ fromJSON(inputs.tag) }}"
           echo "Environment: ${{ inputs.environment }}"
         name: Workflow Inputs
+        if: ${{ github.event_name == 'workflow_dispatch' }}
